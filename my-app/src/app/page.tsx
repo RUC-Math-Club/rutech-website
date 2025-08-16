@@ -7,7 +7,8 @@ export default function Home() {
     <>
       <Navbar />
       <Main />
-      {/* <Overview /> */}
+      <div className="h-px bg-white" />
+      <Overview />
     </>
  );
 }
