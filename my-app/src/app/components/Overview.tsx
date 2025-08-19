@@ -1,11 +1,48 @@
 import About from "./About";
-import Events from "./Events";
+import EventCard from "./EventsCard";
+
 
 function Overview () {
+
+  const events = [
+  // Partner Events – Past
+  {
+    title: "Machine Learning Seminar: Benoît from Google DeepMind",
+    description: "Benoît presented his recent work on implicit regularization in Deep Neural Networks.",
+    date: "12/05",
+    time: "5:00 PM",
+    isDone: true
+  },
+  {
+    title: "Math Competition for Research Mentorship",
+    description: "A friendly problem-solving competition designed to pair students with mentors for research opportunities.",
+    date: "12/08",
+    time: "3:00 PM",
+    isDone: true
+  },
+
+  // Partner Events – Future
+  {
+    title: "Math Club Datathon",
+    description: "A weekend-long event where teams analyze real-world datasets. Prizes for most impactful insights.",
+    date: "08/24",
+    time: "10:00 AM",
+    isDone: false
+  },
+  {
+    title: "If ACM is down we can add those events too",
+    description: "",
+    date: "09/07",
+    time: "9:00 AM",
+    isDone: false
+  }
+  ];
+
+
   return (
     <>
-      <div className="">
-        <div className="flex flex-col items-center justify-center m-5 sm:m-20 lg:m-60">
+      <div className="relative z-20 w-screen h-screen">
+        <div className="flex flex-col items-center justify-center m-35">
           <h2>Brief Overview</h2>
           <h5>Important Links</h5>
           
@@ -24,7 +61,22 @@ function Overview () {
 
           </div>
           
-          <Events />
+          {/* Events Section */}
+          <div>
+            <h2 className="text-muted-foreground text-lg text-center mb-8">Upcoming Events</h2>
+            <div className="border p-5  rounded-2xl border-gray-400 space-y-4">
+              {events.map((event, index) => (
+                <EventCard
+                  key={index}
+                  title={event.title}
+                  description={event.description}
+                  date={event.date}
+                  time={event.time}
+                  isDone={event.isDone}
+                />
+              ))}
+            </div>
+          </div>
           <About />
 
         </div>

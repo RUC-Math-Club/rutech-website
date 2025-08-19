@@ -1,11 +1,18 @@
 import Head from 'next/head';
 import VantaBackground from './VantaBackground';
+import VantaCloudbackground from './VantaCloudBackground';
 
 function Main() {
   return (
     <>
       <div className="relative h-screen w-full">
         <VantaBackground />
+        
+        {/* Possibly use this for white mode */}
+       {/*  <div className='absolute inset-0 z-0'>
+          <VantaCloudbackground />
+        </div>
+ */}
 
         <div
           className="
@@ -16,7 +23,7 @@ function Main() {
             text-center
           "
         >
-          <div className=''>
+          <div className='z-20'>
 
             <Head>
               <link
