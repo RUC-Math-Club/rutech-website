@@ -40,7 +40,8 @@ function Main() {
             <h1
               className="
                 font-poppins
-                text-[8rem]
+                text-[4rem]
+                xl:text-[8rem]
                 font-extrabold
                 text-red-600
                 uppercase

@@ -42,12 +42,14 @@ function Overview () {
   return (
     <>
       <div className="relative z-20 w-screen h-screen">
-        <div className="flex flex-col items-center justify-center m-35">
+        <div className="flex flex-col items-center justify-center m-5 sm:m-35">
           <h2>Brief Overview</h2>
           <h5>Important Links</h5>
           
           <div className="flex flex-col md:flex-row  items-center justify-between">
-            <span className="m-5 text-2xl font-bold hover:text-red-400 bg-gradient-to-r from-red-800 via-red-400 to-purple-400 bg-[length:200%_100%] bg-clip-text text-transparent">
+            <span className="m-5 text-2xl font-bold hover:text-red-400 
+                             bg-gradient-to-r from-red-800 
+                             via-red-400 to-purple-400 bg-[length:200%_100%] bg-clip-text text-transparent">
               Mailing List
             </span>
 
@@ -62,7 +64,7 @@ function Overview () {
           </div>
           
           {/* Events Section */}
-          <div>
+          <div id="events">
             <h2 className="text-muted-foreground text-lg text-center mb-8">Upcoming Events</h2>
             <div className="border p-5  rounded-2xl border-gray-400 space-y-4">
               {events.map((event, index) => (
@@ -77,9 +79,8 @@ function Overview () {
               ))}
             </div>
           </div>
-          <About />
-
         </div>
+        <About />
       </div>
     </>
   );
