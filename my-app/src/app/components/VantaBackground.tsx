@@ -3,9 +3,38 @@
 import { useEffect, useRef, useState } from "react";
 import Script from 'next/script';
 
+// Define Vanta effect interface
+interface VantaEffect {
+  destroy: () => void;
+}
+
+// Define Vanta rings configuration
+interface VantaRingsConfig {
+  el: HTMLElement | null;
+  mouseControls: boolean;
+  touchControls: boolean;
+  gyroControls: boolean;
+  minHeight: number;
+  minWidth: number;
+  scale: number;
+  scaleMobile: number;
+  color: number;
+  backgroundColor: number;
+  backgroundAlpha: number;
+}
+
+// Extend Window interface to include VANTA
+declare global {
+  interface Window {
+    VANTA?: {
+      RINGS: (config: VantaRingsConfig) => VantaEffect;
+    };
+  }
+}
+
 export default function VantaBackground() {
-  const [vantaEffect, setVantaEffect] = useState(null);
-  const vantaRef = useRef(null);
+  const [vantaEffect, setVantaEffect] = useState<VantaEffect | null>(null);
+  const vantaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Only initialize if VANTA is loaded and effect doesn't exist

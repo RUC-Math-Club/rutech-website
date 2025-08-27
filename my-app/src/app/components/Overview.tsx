@@ -41,7 +41,7 @@ function Overview () {
 
   return (
     <>
-      <div className="relative z-20 w-screen h-screen">
+      <div className="relative z-20 w-screen">
         <div className="flex flex-col items-center justify-center m-5 sm:m-35">
           <h2>Brief Overview</h2>
           <h5>Important Links</h5>
