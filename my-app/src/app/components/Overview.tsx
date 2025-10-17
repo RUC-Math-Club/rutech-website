@@ -1,5 +1,6 @@
 import About from "./About";
 import EventCard from "./EventsCard";
+import Initiatives from "./Initiatives";
 
 
 function Overview () {
@@ -7,17 +8,17 @@ function Overview () {
   const events = [
   // Partner Events – Past
   {
-    title: "Machine Learning Seminar: Benoît from Google DeepMind",
-    description: "Benoît presented his recent work on implicit regularization in Deep Neural Networks.",
-    date: "12/05",
-    time: "5:00 PM",
+    title: "Machine Learning Seminar: Dr. Benoit from Google DeepMind",
+    description: "Benoit presented his recent work on implicit regularization in Deep Neural Networks.",
+    date: "03/10/25",
+    time: "12:45 PM",
     isDone: true
   },
   {
     title: "Math Competition for Research Mentorship",
     description: "A friendly problem-solving competition designed to pair students with mentors for research opportunities.",
-    date: "12/08",
-    time: "3:00 PM",
+    date: "04/03/25",
+    time: "12:45 PM",
     isDone: true
   },
 
@@ -25,17 +26,10 @@ function Overview () {
   {
     title: "Math Club Datathon",
     description: "A weekend-long event where teams analyze real-world datasets. Prizes for most impactful insights.",
-    date: "08/24",
-    time: "10:00 AM",
+    date: "TBD",
+    time: "",
     isDone: false
   },
-  {
-    title: "If ACM is down we can add those events too",
-    description: "",
-    date: "09/07",
-    time: "9:00 AM",
-    isDone: false
-  }
   ];
 
 
@@ -81,6 +75,7 @@ function Overview () {
           </div>
         </div>
         <About />
+        <Initiatives />
       </div>
     </>
   );
